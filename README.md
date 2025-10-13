@@ -13,7 +13,7 @@ This repository serves as:
 ## Documents
 
 ### [LESSONS_LEARNED.md](LESSONS_LEARNED.md)
-Comprehensive catalog organized by:
+**General lessons across all projects** - Comprehensive catalog organized by:
 - Critical bugs and their solutions
 - Architecture and design patterns
 - Development process workflows
@@ -26,12 +26,39 @@ Comprehensive catalog organized by:
 - Record Your Story Timeline App (TypeScript, Vite, Supabase, AI)
 - Classic Games Portal (Express, multiplayer infrastructure)
 
+**Key Topics:**
+- WebSocket error handling and security
+- Server-side input validation
+- Canvas DPI scaling
+- Dynamic URLs and environment config
+- Mobile-first design patterns
+
+### [RECORD_YOUR_STORY_LESSONS.md](RECORD_YOUR_STORY_LESSONS.md)
+**Project-specific deep dive** - Detailed lessons from Record Your Story timeline app:
+- Login blank screen (race conditions, null checks)
+- LocalStorage quota exceeded (hybrid storage strategy)
+- Event delegation patterns (dynamic content)
+- Rich text editor management (Quill.js)
+- TypeScript naming conflicts
+- OAuth redirect URI matching
+- Undo/Redo system implementation
+- Performance optimizations (debouncing, lazy loading)
+- Development checklists
+
+**Unique Patterns:**
+- 3-tier storage architecture (LocalStorage + IndexedDB + Supabase)
+- Toast notification system
+- History/undo implementation
+- Thumbnail generation
+- Migration strategies (V1 to V2 rewrite)
+
 ### [ASTEROIDS_ISSUES_ANALYSIS.md](ASTEROIDS_ISSUES_ANALYSIS.md)
-Detailed analysis of Asteroids multiplayer game issues:
+**Game-specific analysis** - Detailed analysis of Asteroids multiplayer game:
 - 7 issues identified (high to low priority)
 - Security vulnerabilities (input validation)
 - UX improvements (toast notifications, DPI scaling)
 - Performance monitoring recommendations
+- Recommended fixes with code examples
 
 ## How to Use
 
