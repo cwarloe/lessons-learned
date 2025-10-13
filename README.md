@@ -60,14 +60,35 @@ This repository serves as:
 - Performance monitoring recommendations
 - Recommended fixes with code examples
 
+### [PROJECT_COVERAGE.md](PROJECT_COVERAGE.md)
+**Cross-project analysis** - Complete overview of all lessons across projects:
+- Project breakdown (3 major + 1 emerging)
+- Cross-project patterns (storage, error handling, TypeScript)
+- Common mistakes across all projects
+- Quick reference matrix (lookup by problem)
+- Statistics (23+ issues, 15+ bugs, 70KB docs)
+
+### [REUSABLE_RESOURCES.md](REUSABLE_RESOURCES.md) ⭐ NEW!
+**Tools, services & code templates** - Everything you can reuse for future projects:
+- **Tools & Services:** Render, Supabase, Vite, Docker, Quill, IndexedDB
+- **7 Reusable Code Modules:** Supabase service, Toast system, WebSocket manager, Undo/Redo, etc.
+- **Architecture Patterns:** Service layer, Hybrid storage, Event delegation
+- **Configuration Templates:** Vite setup, Render deployment, Supabase schema, Docker Compose
+- **Decision Matrices:** Choose the right storage/deployment platform
+- **Quick Start Templates:** Copy-paste project starters
+
+**Don't reinvent the wheel!** Copy proven code instead of writing from scratch.
+
 ## How to Use
 
 ### Before Starting a New Project
 
-1. **Review the relevant section** in LESSONS_LEARNED.md
-2. **Check for similar patterns** to your project
-3. **Apply the checklists** (TypeScript, Storage, Auth, etc.)
-4. **Avoid documented anti-patterns**
+1. **Review REUSABLE_RESOURCES.md** for tools and code you can copy
+2. **Check LESSONS_LEARNED.md** for relevant patterns to your project
+3. **Review PROJECT_COVERAGE.md** for cross-project patterns
+4. **Apply the checklists** (TypeScript, Storage, Auth, etc.)
+5. **Copy code templates** instead of writing from scratch
+6. **Avoid documented anti-patterns**
 
 ### During Development
 
