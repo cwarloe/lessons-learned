@@ -79,6 +79,176 @@ npx localtunnel --port 8080
 
 ---
 
+#### 4. **Missing WebSocket Error Handling**
+**Problem:** JSON.parse crashes on malformed WebSocket messages
+**Root Cause:** No try-catch wrapper around message parsing
+**Impact:** Client crashes on corrupted network data
+
+**Solution:**
+```javascript
+// BEFORE (crashes on bad data)
+ws.onmessage = (event) => {
+    const data = JSON.parse(event.data); // ❌ No error handling
+    handleServerMessage(data);
+};
+
+// AFTER (robust error handling)
+ws.onmessage = (event) => {
+    try {
+        const data = JSON.parse(event.data);
+        handleServerMessage(data);
+    } catch (error) {
+        console.error('Failed to parse server message:', error);
+        console.error('Raw message:', event.data);
+        // Don't crash - continue playing
+    }
+};
+```
+
+**Lesson:** Always wrap JSON.parse in try-catch, especially for network data
+
+---
+
+#### 5. **No Server-Side Input Validation**
+**Problem:** Server blindly accepts client input without validation
+**Root Cause:** Trusting client-side data
+**Security Risk:** HIGH - allows client-side cheating and potential server crashes
+
+**Solution:**
+```javascript
+// BEFORE (accepts anything)
+if (d.type === 'input') {
+    game.players[id].input = d.keys || {};
+}
+
+// AFTER (validates and sanitizes)
+if (d.type === 'input') {
+    const player = game.players[id];
+    if (!player) {
+        console.warn(`Input for non-existent player: ${id}`);
+        return;
+    }
+
+    // ✅ Validate and sanitize keys
+    const keys = d.keys || {};
+    player.input = {
+        left: Boolean(keys.left),   // Force boolean
+        right: Boolean(keys.right),
+        up: Boolean(keys.up),
+        space: Boolean(keys.space)
+    };
+    // Ignore any extra keys
+}
+```
+
+**Lessons:**
+- ❌ Never trust client input
+- ✅ Validate and sanitize all incoming data
+- ✅ Whitelist expected fields only
+- ✅ Force type conversion (Boolean, Number)
+
+---
+
+#### 6. **Canvas DPI Scaling Issues**
+**Problem:** Blurry graphics on high-DPI displays (Retina, 4K)
+**Root Cause:** Only updating CSS size, not canvas internal resolution
+
+**Solution:**
+```javascript
+// BEFORE (blurry on high-DPI)
+canvas.style.width = displayWidth + 'px';
+canvas.style.height = displayHeight + 'px';
+// canvas.width and canvas.height never updated
+
+// AFTER (sharp on all displays)
+canvas.style.width = displayWidth + 'px';
+canvas.style.height = displayHeight + 'px';
+
+// ✅ Update canvas resolution for device pixel ratio
+const dpr = window.devicePixelRatio || 1;
+canvas.width = 800 * dpr;
+canvas.height = 600 * dpr;
+
+// ✅ Scale context to match
+ctx.scale(dpr, dpr);
+```
+
+**Lesson:** Update both CSS size AND canvas resolution, scale context for DPI
+
+---
+
+#### 7. **No Reconnection Feedback**
+**Problem:** Users don't notice when connection drops and reconnects
+**Root Cause:** Status text changes but no visual feedback
+
+**Solution:**
+```javascript
+// Added toast notifications
+function showToast(message, type = 'info') {
+    const toast = document.createElement('div');
+    toast.className = `toast toast-${type}`;
+    toast.textContent = message;
+    toast.style.cssText = `
+        position: fixed;
+        bottom: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 12px 24px;
+        background: ${type === 'success' ? '#0f0' : '#f00'};
+        color: #000;
+        z-index: 10000;
+    `;
+    document.body.appendChild(toast);
+
+    setTimeout(() => {
+        toast.style.transition = 'opacity 0.3s';
+        toast.style.opacity = '0';
+        setTimeout(() => toast.remove(), 300);
+    }, 2000);
+}
+
+ws.onclose = () => {
+    statusEl.textContent = 'Disconnected - Reconnecting...';
+    showToast('Connection lost. Reconnecting...', 'error');
+    setTimeout(connect, 2000);
+};
+
+ws.onopen = () => {
+    if (hasDisconnected) {
+        showToast('Reconnected to server', 'success');
+    }
+};
+```
+
+**Lesson:** Provide visual feedback (toasts) for all state changes, not just text updates
+
+---
+
+### Additional Lessons from Asteroids
+
+**Error Handling:**
+- ✅ Wrap all JSON.parse calls in try-catch
+- ✅ Log errors with context (raw message, player ID)
+- ✅ Continue execution after errors when safe
+
+**Security:**
+- ✅ Validate all client input on server
+- ✅ Whitelist expected fields
+- ✅ Force type conversion for safety
+- ❌ Never trust client-provided data
+
+**Graphics:**
+- ✅ Account for device pixel ratio (window.devicePixelRatio)
+- ✅ Update both canvas.width/height AND style.width/height
+- ✅ Scale canvas context to match DPI
+
+**User Feedback:**
+- ✅ Toast notifications for network events
+- ✅ Visual feedback for state changes
+- ✅ Clear reconnection messages
+
+---
+
 ## 📖 Project 2: Record Your Story Timeline App
 
 ### Overview
