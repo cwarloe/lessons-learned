@@ -79,6 +79,9 @@ This repository serves as:
 
 **Don't reinvent the wheel!** Copy proven code instead of writing from scratch.
 
+### [GITHUB_PAGES_HTTPS_CUSTOM_DOMAIN.md](GITHUB_PAGES_HTTPS_CUSTOM_DOMAIN.md)
+**Ops lesson (2026-09-20)** - GitHub Pages custom domain stuck on HTTP after a DNS cutover, and the clear/re-add fix that got the certificate issued.
+
 ## How to Use
 
 ### Before Starting a New Project
