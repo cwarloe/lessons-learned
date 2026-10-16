@@ -9,7 +9,7 @@
 
 ## 📋 Quick Reference
 
-This document catalogs project-specific lessons learned during Record Your Story development. For general lessons across all projects, see [../LESSONS_LEARNED.md](../LESSONS_LEARNED.md).
+This document catalogs project-specific lessons learned during Record Your Story development. For general lessons across all projects, see [LESSONS_LEARNED.md](LESSONS_LEARNED.md).
 
 ---
 
@@ -1040,11 +1040,11 @@ async function createThumbnail(blob: Blob, maxWidth = 200): Promise<Blob> {
 
 ## 🔗 Related Documentation
 
-- [../LESSONS_LEARNED.md](../LESSONS_LEARNED.md) - General lessons across all projects
-- [CHANGELOG.md](CHANGELOG.md) - Full version history
-- [COLLABORATION.md](COLLABORATION.md) - Multi-user architecture
-- [AI_FEATURES.md](AI_FEATURES.md) - AI integration guide
-- [RENDER_DEPLOYMENT.md](RENDER_DEPLOYMENT.md) - Deployment instructions
+- [LESSONS_LEARNED.md](LESSONS_LEARNED.md) - General lessons across all projects
+- [CHANGELOG.md](https://github.com/cwarloe/record-your-story/blob/main/CHANGELOG.md) - Full version history
+- [COLLABORATION.md](https://github.com/cwarloe/record-your-story/blob/main/COLLABORATION.md) - Multi-user architecture
+- [AI_FEATURES.md](https://github.com/cwarloe/record-your-story/blob/main/AI_FEATURES.md) - AI integration guide
+- [RENDER_DEPLOYMENT.md](https://github.com/cwarloe/record-your-story/blob/main/RENDER_DEPLOYMENT.md) - Deployment instructions
 
 ---
 

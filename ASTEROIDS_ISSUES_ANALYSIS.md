@@ -442,9 +442,9 @@ function gameLoop() {
 
 ## 📁 Files Analyzed
 
-- [client.js](games/asteroids/client.js) - Client-side game engine
-- [index.html](games/asteroids/index.html) - UI and controls
-- [server.js](server.js) - WebSocket server (lines 40-147)
+- [client.js](https://github.com/cwarloe/classic-games-portal/blob/main/games/asteroids/client.js) - Client-side game engine
+- [index.html](https://github.com/cwarloe/classic-games-portal/blob/main/games/asteroids/index.html) - UI and controls
+- [server.js](https://github.com/cwarloe/classic-games-portal/blob/main/server.js) - WebSocket server (lines 40-147)
 
 ---
 

@@ -949,12 +949,12 @@ test('user can create and edit event', async ({ page }) => {
 
 ## 🔗 Related Documentation
 
-- [CHANGELOG.md](record-your-story/CHANGELOG.md) - Full version history
-- [COLLABORATION.md](record-your-story/COLLABORATION.md) - Collaboration architecture
-- [AI_FEATURES.md](record-your-story/AI_FEATURES.md) - AI implementation guide
-- [RENDER_DEPLOYMENT.md](record-your-story/RENDER_DEPLOYMENT.md) - Deployment guide
-- [SESSION_SUMMARY.md](record-your-story/SESSION_SUMMARY.md) - Autonomous session notes
-- [AUTONOMOUS_SESSION_SUMMARY.md](record-your-story/AUTONOMOUS_SESSION_SUMMARY.md) - V2.6 work log
+- [CHANGELOG.md](https://github.com/cwarloe/record-your-story/blob/main/CHANGELOG.md) - Full version history
+- [COLLABORATION.md](https://github.com/cwarloe/record-your-story/blob/main/COLLABORATION.md) - Collaboration architecture
+- [AI_FEATURES.md](https://github.com/cwarloe/record-your-story/blob/main/AI_FEATURES.md) - AI implementation guide
+- [RENDER_DEPLOYMENT.md](https://github.com/cwarloe/record-your-story/blob/main/RENDER_DEPLOYMENT.md) - Deployment guide
+- [SESSION_SUMMARY.md](https://github.com/cwarloe/record-your-story/blob/main/SESSION_SUMMARY.md) - Autonomous session notes
+- [AUTONOMOUS_SESSION_SUMMARY.md](https://github.com/cwarloe/record-your-story/blob/main/AUTONOMOUS_SESSION_SUMMARY.md) - V2.6 work log
 
 ---
 
