@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>BBP Outline - Development Lessons Learned</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: white;
+    }
+
+    .bbp-table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 2px solid black;
+      margin-bottom: 20px;
+      table-layout: fixed;
+    }
+
+    .bbp-table td {
+      border: 1px solid black;
+      padding: 12px;
+      vertical-align: top;
+      font-size: 11pt;
+    }
+
+    .section-header {
+      background-color: #e8e8e8;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .act-header {
+      background-color: #d0d0d0;
+      font-weight: bold;
+      font-size: 12pt;
+      text-align: center;
+    }
+
+    .key-idea-cell {
+      background-color: #f0f0f0;
+      font-weight: bold;
+      vertical-align: middle;
+    }
+
+    .explanation-cell {
+      background-color: #f8f8f8;
+      vertical-align: middle;
+    }
+
+    .footer-text {
+      font-size: 10pt;
+      font-style: italic;
+      text-align: center;
+    }
+
+    .label {
+      display: block;
+      font-size: 9pt;
+      font-weight: normal;
+      text-transform: uppercase;
+      color: #555;
+      margin-bottom: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Beyond Bullet Points Outline</h1>
+  <h2>Development Lessons Learned</h2>
+  <h3>Audience: developers starting a new project</h3>
+
+  <table class="bbp-table">
+    <colgroup>
+      <col style="width: 30%">
+      <col style="width: 30%">
+      <col style="width: 40%">
+    </colgroup>
+
+    <!-- TITLE -->
+    <tr>
+      <td colspan="3" class="section-header">TITLE</td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <strong>Don't Repeat Yesterday's Mistakes</strong><br>
+        A living catalog of lessons, patterns, and reusable resources to review before starting new work.
+      </td>
+    </tr>
+
+    <!-- ACT 1: SETUP -->
+    <tr>
+      <td colspan="3" class="act-header">ACT 1: SETUP</td>
+    </tr>
+
+    <tr>
+      <td class="section-header">Setting</td>
+      <td class="section-header" colspan="2">Role</td>
+    </tr>
+    <tr>
+      <td>You're about to start a new project, much like the games and apps you've already built.</td>
+      <td colspan="2">You're the developer who will hit the same bugs and pitfalls unless something changes.</td>
+    </tr>
+    <tr>
+      <td class="section-header">Point A (Where am I?)</td>
+      <td class="section-header">Call to Action (How do I get from A to B?)</td>
+      <td class="section-header">Point B (Where do I want to be?)</td>
+    </tr>
+    <tr>
+      <td>Hard-won fixes live in memory and scattered code, so mistakes repeat and projects start from scratch.</td>
+      <td>Scan the lessons, pull reusable code, and record new lessons afterward.</td>
+      <td>A stronger starting point: fewer repeated bugs and faster setup.</td>
+    </tr>
+
+    <!-- TRANSITION 1 -->
+    <tr>
+      <td colspan="3" class="section-header">TRANSITION 1</td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        This repo captures what past projects taught. Three ideas help you use it: what it catalogs, how lessons stay in context, and what you can reuse.
+      </td>
+    </tr>
+
+    <!-- ACT 2 -->
+    <tr>
+      <td colspan="3" class="act-header">ACT 2: DEVELOP THE ACTION</td>
+    </tr>
+    <tr>
+      <td class="section-header">Key Idea (5 minutes)</td>
+      <td class="section-header">Explanation (15 minutes)</td>
+      <td class="section-header">Details (45 minutes)</td>
+    </tr>
+
+    <!-- KEY IDEA 1 -->
+    <tr>
+      <td rowspan="9" class="key-idea-cell">
+        <span class="label">Key Idea 1</span>
+        A Living Catalog Turns Past Mistakes into a Pre-Project Checklist
+      </td>
+      <td rowspan="3" class="explanation-cell">
+        <span class="label">Explanation 1</span>
+        <strong>What It Captures:</strong> lessons organized by type
+      </td>
+      <td>Critical bugs and their solutions</td>
+    </tr>
+    <tr>
+      <td>Architecture and design patterns</td>
+    </tr>
+    <tr>
+      <td>Anti-patterns to avoid</td>
+    </tr>
+    <tr>
+      <td rowspan="3" class="explanation-cell">
+        <span class="label">Explanation 2</span>
+        <strong>Where It Comes From:</strong> real projects
+      </td>
+      <td>Multiplayer Asteroids game</td>
+    </tr>
+    <tr>
+      <td>Record Your Story timeline app</td>
+    </tr>
+    <tr>
+      <td>Classic Games Portal</td>
+    </tr>
+    <tr>
+      <td rowspan="3" class="explanation-cell">
+        <span class="label">Explanation 3</span>
+        <strong>How You Use It:</strong> reference at the right moments
+      </td>
+      <td>Review before starting new work</td>
+    </tr>
+    <tr>
+      <td>Quick lookup during development</td>
+    </tr>
+    <tr>
+      <td>Add new lessons as projects finish</td>
+    </tr>
+
+    <!-- TRANSITION 2 -->
+    <tr>
+      <td colspan="3" class="section-header">TRANSITION 2</td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        Restate: the catalog turns past mistakes into a checklist. Relate: general lessons need project context to be useful. Introduce: deep dives that show lessons in context.
+      </td>
+    </tr>
+
+    <!-- KEY IDEA 2 -->
+    <tr>
+      <td rowspan="9" class="key-idea-cell">
+        <span class="label">Key Idea 2</span>
+        Project Deep Dives Show Lessons in Context
+      </td>
+      <td rowspan="3" class="explanation-cell">
+        <span class="label">Explanation 1</span>
+        <strong>Project-Specific Analyses:</strong> detail behind the lessons
+      </td>
+      <td>Record Your Story: storage, auth, undo/redo</td>
+    </tr>
+    <tr>
+      <td>Asteroids: security and UX issues by priority</td>
+    </tr>
+    <tr>
+      <td>Recommended fixes with examples</td>
+    </tr>
+    <tr>
+      <td rowspan="3" class="explanation-cell">
+        <span class="label">Explanation 2</span>
+        <strong>Cross-Project Patterns:</strong> what repeats
+      </td>
+      <td>Storage and error-handling approaches</td>
+    </tr>
+    <tr>
+      <td>TypeScript naming and configuration issues</td>
+    </tr>
+    <tr>
+      <td>Common mistakes across all projects</td>
+    </tr>
+    <tr>
+      <td rowspan="3" class="explanation-cell">
+        <span class="label">Explanation 3</span>
+        <strong>Fast Lookup:</strong> find answers by problem
+      </td>
+      <td>Quick reference matrix</td>
+    </tr>
+    <tr>
+      <td>Best practices by category</td>
+    </tr>
+    <tr>
+      <td>Key takeaways and checklists</td>
+    </tr>
+
+    <!-- TRANSITION 3 -->
+    <tr>
+      <td colspan="3" class="section-header">TRANSITION 3</td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        Restate: deep dives keep lessons in context. Relate: knowing the problem is half the work; reusing the solution saves the rest. Introduce: reusable resources.
+      </td>
+    </tr>
+
+    <!-- KEY IDEA 3 -->
+    <tr>
+      <td rowspan="9" class="key-idea-cell">
+        <span class="label">Key Idea 3</span>
+        Reusable Resources Keep You from Reinventing the Wheel
+      </td>
+      <td rowspan="3" class="explanation-cell">
+        <span class="label">Explanation 1</span>
+        <strong>Tools and Decisions:</strong> proven choices
+      </td>
+      <td>Tools and services: Render, Supabase, Vite, Docker</td>
+    </tr>
+    <tr>
+      <td>Editor and storage options: Quill, IndexedDB</td>
+    </tr>
+    <tr>
+      <td>Decision matrices for storage and deployment</td>
+    </tr>
+    <tr>
+      <td rowspan="3" class="explanation-cell">
+        <span class="label">Explanation 2</span>
+        <strong>Reusable Code:</strong> modules and patterns
+      </td>
+      <td>Seven reusable code modules</td>
+    </tr>
+    <tr>
+      <td>Toast, undo/redo, and WebSocket manager</td>
+    </tr>
+    <tr>
+      <td>Service layer, hybrid storage, event delegation</td>
+    </tr>
+    <tr>
+      <td rowspan="3" class="explanation-cell">
+        <span class="label">Explanation 3</span>
+        <strong>Starter Templates:</strong> copy and adapt
+      </td>
+      <td>Vite and Docker Compose configuration</td>
+    </tr>
+    <tr>
+      <td>Render deployment and Supabase schema</td>
+    </tr>
+    <tr>
+      <td>GitHub Pages HTTPS custom domain guide</td>
+    </tr>
+
+    <!-- ACT 3: RESOLUTION -->
+    <tr>
+      <td colspan="3" class="act-header">ACT 3: RESOLUTION</td>
+    </tr>
+
+    <tr>
+      <td class="section-header">Challenge (Recap)</td>
+      <td class="section-header">Action</td>
+      <td class="section-header">Outcome</td>
+    </tr>
+
+    <tr>
+      <td>
+        <strong>Will this project repeat an old mistake?</strong><br><br>
+        • Which past lessons apply here?<br>
+        • What can I reuse instead of rebuild?<br>
+        • What will I add when I finish?
+      </td>
+      <td>
+        <strong>Before you start:</strong><br><br>
+        • Scan the lessons and checklists<br>
+        • Pull reusable code and templates<br>
+        • Record new lessons afterward
+      </td>
+      <td>
+        <strong>A stronger starting point:</strong><br><br>
+        • Fewer repeated bugs<br>
+        • Faster project setup<br>
+        • A catalog that keeps growing
+      </td>
+    </tr>
+
+    <!-- CLOSING -->
+    <tr>
+      <td colspan="3" class="section-header">CLOSING LINE</td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        Copy proven solutions instead of writing from scratch.
+      </td>
+    </tr>
+
+    <!-- FOOTER -->
+    <tr>
+      <td colspan="3" class="footer-text">
+        Beyond Bullet Points Story Template, &copy; 2007 Cliff Atkinson<br>
+        Development Lessons Learned
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
