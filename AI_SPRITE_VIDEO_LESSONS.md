@@ -8,6 +8,14 @@
 
 ---
 
+## Character spec (locked by Charles, 2026-11-19)
+
+Keep the clothing from the original Grok sprites: cyan-blue sleeveless tank, red shorts, white ankle socks, **blue sneakers with white soles and laces**. **No green shoes.** Green shoes only ever appeared in the Grok image-to-video clips (back extension, run, cadet-run) as part of the character drift. Spiky black hair, warm tan skin. Measured on the six chosen strips: 0 green pixels on the figure.
+
+Put the shoe colour in every prompt in words ("blue sneakers"), because the model will not keep it on its own across separate generations.
+
+---
+
 ## What we started with
 
 | Source | What it produced | Verdict |
