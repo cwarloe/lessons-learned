@@ -31,6 +31,14 @@ The kit lives in `cwarloe/knowledge-harvest` at `playbooks/exercise-sprite-video
 
 ---
 
+## Layers and in-painting (2026-11-19)
+
+- **Save layers as files, not as workspace state.** Baked sprites (one transparent file per pose, plus anchors), seven backdrop layer files, props and a layer-pack export with a `scene.json` manifest. The kit then rebuilds from files, and another tool can recombine them.
+- **The edit tool is a usable in-painting tool.** "Change X, preserve Y" re-renders the strip. On two real weak spots, the untouched figures kept 96-99% of their shape, and it cost about 433 credits a take (about a quarter of a fresh generation). It is not a mask brush: the output size changed (1376x768 to 1280x720) and some takes lost the darker far-side shading. Say what to keep, and check.
+- **An edit cannot add a difference that the camera angle hides.** Scissor stance A and B still look alike in profile. That needs a front view, not an edit.
+- **Some exercises need another camera.** Astride and jack jumps and chart 3's toe touch cannot be read from the side.
+- **Count what is really new before estimating.** By name, starting position and movement, six charts need 32 distinct strips (not 36), and 26 are left. Compare on what changes the picture; comparing the notes made everything look new.
+
 ## What we started with
 
 | Source | What it produced | Verdict |
