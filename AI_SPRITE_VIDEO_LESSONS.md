@@ -16,6 +16,21 @@ Put the shoe colour in every prompt in words ("blue sneakers"), because the mode
 
 ---
 
+## Design principle (Charles, 2026-11-19): build as if it will change, because it will
+
+Everything gets updated in one to four ways, so each kind of change has to be small, quick and cheap. What that meant in practice:
+
+- **One home per kind of change.** Look and wording in `theme.json`, the character in `character.json`, exercises and charts in `strips.json`. Nothing about the plan is typed into the code; the data file is a parameter.
+- **Layers kept apart.** Backdrop, the cut-out boy and the on-screen text are separate, so changing one never touches the others.
+- **Free fixes before paid ones.** Colours are a hue shift on the transparent cut-out (no credits). Only a wrong pose or a new exercise costs credits, about $1.33 per strip.
+- **Cache by what a result depends on** (strip file, theme, code). Measured: an unchanged rebuild 3 s, one cached exercise under a second, a two-exercise recolour about 27 s, against 5:37 for the whole video.
+- **Keep the prompts.** The pose list that made each strip is in the repo, so any strip can be regenerated the same way.
+- **A smoke test that takes 15 seconds**, so a change can prove it broke nothing.
+
+The kit lives in `cwarloe/knowledge-harvest` at `playbooks/exercise-sprite-video/`.
+
+---
+
 ## What we started with
 
 | Source | What it produced | Verdict |
