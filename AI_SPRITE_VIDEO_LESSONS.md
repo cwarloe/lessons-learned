@@ -39,6 +39,14 @@ The kit lives in `cwarloe/knowledge-harvest` at `playbooks/exercise-sprite-video
 - **Some exercises need another camera.** Astride and jack jumps and chart 3's toe touch cannot be read from the side.
 - **Count what is really new before estimating.** By name, starting position and movement, six charts need 32 distinct strips (not 36), and 26 are left. Compare on what changes the picture; comparing the notes made everything look new.
 
+## Camera angle (2026-11-19)
+
+- **The author prefers a slight turn toward the camera** (about 30 to 45 degrees off a pure side view), not a 90 degree profile. Grok Imagine drew the first toe-touch figure that way unprompted and it was liked. New strips ask for it; chart 1 stays in strict side view.
+- **It also helps legibility:** near and far limbs are easier to tell apart than in pure profile.
+- **Keep one angle inside a strip.** Grok drew pose 1 turned toward the camera and poses 2 to 5 in profile. The crossfade then shows a ghost of the turn. Ask for "the SAME camera angle in every pose".
+- **Some exercises still need a true front view** (astride jumps), because the legs and arms move sideways.
+- **Tools differ in how many figures they return.** Asked for 4, Grok Imagine returned 5 (an extra bounce pose). Measure the figures before deciding how to use them: here pose 4 was the real press, pose 3 a near-duplicate that works as the rebound.
+
 ## What we started with
 
 | Source | What it produced | Verdict |
