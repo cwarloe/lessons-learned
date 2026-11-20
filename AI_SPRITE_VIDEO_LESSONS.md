@@ -47,6 +47,13 @@ The kit lives in `cwarloe/knowledge-harvest` at `playbooks/exercise-sprite-video
 - **Some exercises still need a true front view** (astride jumps), because the legs and arms move sideways.
 - **Tools differ in how many figures they return.** Asked for 4, Grok Imagine returned 5 (an extra bounce pose). Measure the figures before deciding how to use them: here pose 4 was the real press, pose 3 a near-duplicate that works as the rebound.
 
+## Keep and grade every take (2026-11-20)
+
+- **Index the takes you reject as well as the ones you use.** The wired strips were saved, but the alternates lived only in a scratch folder and in the chat. A rejected take with a note ("knees straight in the squat") saves generating it again.
+- **Measure what can be counted, grade what cannot.** Figures found, fringe, stray green are automatic. Form, legibility, one camera angle and the same boy are judgment. Record who judged; a model's reading is not an exercise expert's.
+- **Weigh form first.** A good-looking strip with the wrong movement is worse than a plain one with the right movement.
+- The library is `library/` in the kit (`kit/library.py`).
+
 ## What we started with
 
 | Source | What it produced | Verdict |
