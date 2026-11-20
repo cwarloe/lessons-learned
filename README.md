@@ -12,6 +12,9 @@ This repository serves as:
 
 ## Documents
 
+### [SPEC_DRIVEN_DEVELOPMENT.md](SPEC_DRIVEN_DEVELOPMENT.md)
+**When and how to write a spec before building** - Kiro-style requirements → design → tasks workflow, which repos use it (Full / Lite / skip), an EARS cheat sheet, and copyable templates in [`templates/`](templates/).
+
 ### [LESSONS_LEARNED.md](LESSONS_LEARNED.md)
 **General lessons across all projects** - Comprehensive catalog organized by:
 - Critical bugs and their solutions
