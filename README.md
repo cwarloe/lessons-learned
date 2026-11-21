@@ -79,6 +79,21 @@ This repository serves as:
 
 **Don't reinvent the wheel!** Copy proven code instead of writing from scratch.
 
+### [AI_SPRITE_VIDEO_LESSONS.md](AI_SPRITE_VIDEO_LESSONS.md)
+**AI-generated instructional video** - Lessons from the 5BX sprite-boy workout video:
+- Why image-to-video clips look great and get exercise form wrong
+- One generated strip per exercise, checked against the source text
+- Keeping a character identical across exercises (reference pinning, and when the reference leaks its pose)
+- Keying a soft-magenta background, splitting overlapping poses, anchoring figures
+- Prompt skeleton, spend table, and a checklist for the next exercise video
+
+### [STAGED_PROTOTYPE_DEMOS.md](STAGED_PROTOTYPE_DEMOS.md)
+**Standing habit: build in stages, publish a demo** - How to prototype in layers and publish a phone-friendly demo at each stage:
+- The recipe (layers as files, a demo builder, reel + viewer + cost table + honest gaps)
+- Testing in a real browser at phone width before saying it works
+- Private link first, then GitHub Pages from a `gh-pages` branch holding only the demo
+- Gotchas (background-job chaining, killing the wrong process, huge status output)
+
 ### [GITHUB_PAGES_HTTPS_CUSTOM_DOMAIN.md](GITHUB_PAGES_HTTPS_CUSTOM_DOMAIN.md)
 **Ops lesson (2026-09-20)** - GitHub Pages custom domain stuck on HTTP after a DNS cutover, and the clear/re-add fix that got the certificate issued.
 
