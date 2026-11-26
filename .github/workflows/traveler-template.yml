@@ -1,0 +1,36 @@
+name: Agent traveler template checks
+
+on:
+  pull_request:
+    paths:
+      - 'AGENT_PRODUCTION_LINE.md'
+      - 'SPEC_DRIVEN_DEVELOPMENT.md'
+      - 'templates/traveler/**'
+      - 'scripts/check_agent_traveler.py'
+      - 'tests/test_check_agent_traveler.py'
+      - '.github/workflows/traveler-template.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'AGENT_PRODUCTION_LINE.md'
+      - 'SPEC_DRIVEN_DEVELOPMENT.md'
+      - 'templates/traveler/**'
+      - 'scripts/check_agent_traveler.py'
+      - 'tests/test_check_agent_traveler.py'
+      - '.github/workflows/traveler-template.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-template:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python3 scripts/check_agent_traveler.py --template templates/traveler/traveler.md
+      - run: python3 -m unittest discover -s tests -v

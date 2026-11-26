@@ -13,3 +13,7 @@ Thumbs.db
 *.tmp
 *.bak
 .env
+
+# Python checks
+__pycache__/
+*.py[cod]
