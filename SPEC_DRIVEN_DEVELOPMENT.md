@@ -9,15 +9,21 @@ first, then build toward them.
 
 ## When to write a spec
 
-Write one when a change meets **any** of these:
+Write a full three-part spec when the extra coordination prevents real rework,
+for example when **any** of these applies:
 
-- It will take more than one sitting (an agent or future-you must resume it).
-- It touches several files or more than one part of the app.
-- It has behavior you could write a test for.
+- It spans multiple sessions or agents and the next worker needs an explicit
+  shared design rather than the PR description.
+- It changes a substantial interface, data model, cross-component behavior,
+  or a consequential user-facing workflow.
+- The cost or risk of misunderstanding is high enough that a written design
+  and traceable acceptance evidence materially reduce rework.
 
-Skip it when the change is a one-sitting tweak, copy edit, styling fix, or bug
-with an obvious cause. Don't retrofit specs for features that already exist;
-start with the next real feature.
+For small, reversible, preauthorized fixes, a clear PR description and
+reproducible tests are sufficient even when several files change or the code
+has behavior that can be tested. Skip a full spec for one-sitting tweaks, copy
+edits, styling fixes, and obvious bugs. Don't retrofit specs for features that
+already exist; start with the next real feature that benefits from one.
 
 ## Which repos use it
 
@@ -39,9 +45,13 @@ features moves to Full).
    agents may continue routine implementation without repeated approvals as
    long as they stay inside its explicit authority and risk boundaries.
 2. **Design** (`design.md`). Components, data, flow, error handling, and how
-   each requirement will be tested. Approve before tasks.
+   each requirement will be tested. Obtain owner approval when the design
+   changes a consequential decision or exceeds the approved scope; for
+   preauthorized low-risk work, independent agent review and tests can verify
+   the design without another owner approval ceremony.
 3. **Tasks** (`tasks.md`). Small checkbox steps, each tied to requirement IDs.
-   One task at a time; check it off in the same commit that completes it.
+   Parallel agents may work independent tasks at once when file ownership and
+   integration are clear. Check each task off with the commit that completes it.
 4. **Verify**. Every acceptance criterion maps to a passing test or a named
    manual check. Mark the spec `Status: Done`.
 
