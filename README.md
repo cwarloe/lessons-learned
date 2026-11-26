@@ -12,6 +12,14 @@ This repository serves as:
 
 ## Documents
 
+### [AGENT_PRODUCTION_LINE.md](AGENT_PRODUCTION_LINE.md)
+**Lean 6S standard work for autonomous agents** - a compact authority model,
+stop-the-line triggers, measurable acceptance and defect learning. The
+[`templates/traveler/`](templates/traveler/README.md) kit provides one-page
+work orders and defect records, with a dependency-free structural validator and
+regression tests. Adopt it only where a project does not already have an
+authoritative traveler or QA record.
+
 ### [SPEC_DRIVEN_DEVELOPMENT.md](SPEC_DRIVEN_DEVELOPMENT.md)
 **When and how to write a spec before building** - Kiro-style requirements → design → tasks workflow, which repos use it (Full / Lite / skip), an EARS cheat sheet, and copyable templates in [`templates/`](templates/).
 
@@ -116,6 +124,8 @@ This repository serves as:
 1. **Quick lookup** when encountering similar issues
 2. **Reference code examples** for proper patterns
 3. **Check error handling** approaches
+4. **Keep a traveler** for a multi-agent or multi-session work item when the
+   repository has no equivalent; link outputs, evidence and failed attempts
 
 ### After Completing Work
 
@@ -123,6 +133,8 @@ This repository serves as:
 2. **Update existing sections** with new insights
 3. **Add to best practices** catalog
 4. **Commit and push** for team reference
+5. **Preserve the actual verification result** and human decision (if required);
+   a passing technical build is not product or owner approval
 
 ## Key Principles
 

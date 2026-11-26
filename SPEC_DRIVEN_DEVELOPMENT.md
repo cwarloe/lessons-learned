@@ -34,7 +34,10 @@ features moves to Full).
 ## Workflow
 
 1. **Requirements** (`specs/<feature>/requirements.md`). User stories plus
-   acceptance criteria in EARS form. Charles approves before design starts.
+   acceptance criteria in EARS form. For a new consequential product decision,
+   Charles approves before design starts. For a previously approved workstream,
+   agents may continue routine implementation without repeated approvals as
+   long as they stay inside its explicit authority and risk boundaries.
 2. **Design** (`design.md`). Components, data, flow, error handling, and how
    each requirement will be tested. Approve before tasks.
 3. **Tasks** (`tasks.md`). Small checkbox steps, each tied to requirement IDs.
@@ -44,6 +47,12 @@ features moves to Full).
 
 If a requirement changes mid-build, edit `requirements.md` first, then update
 design and tasks to match. The spec stays the source of truth.
+
+For work crossing several agents or sessions, the optional
+[agent traveler](templates/traveler/README.md) can link the acceptance evidence,
+defects and decision status. Do not duplicate an existing repo QA record.
+`ready_for_review` is not `complete`: a passing CI check cannot replace a
+required owner decision.
 
 ## EARS cheat sheet
 
